@@ -1,8 +1,8 @@
 import { DatosNoticia } from './agregacion';
 import { Noticia } from './noticia';
 
-export function editarNoticia(noticias: Noticia[], id: number, datos: DatosNoticia): boolean {
-  const noticia = noticias.find((n) => n.id === id);
+export function editarNoticia(noticias: Array<Noticia>, id: number, datos: DatosNoticia): boolean {
+  const noticia = noticias.find((item) => item.id === id);
   if (!noticia) {
     return false;
   }
@@ -10,5 +10,6 @@ export function editarNoticia(noticias: Noticia[], id: number, datos: DatosNotic
   noticia.contenido = datos.contenido;
   noticia.imagenUrl = datos.imagenUrl;
   noticia.autor = datos.autor;
+
   return true;
 }

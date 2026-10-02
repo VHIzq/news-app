@@ -13,7 +13,7 @@ import { editarNoticia } from './utilidades';
   templateUrl: './app.html',
 })
 export class App {
-  private readonly noticias: Noticia[] = [];
+  private readonly noticias: Array<Noticia> = [];
 
   protected readonly json = signal('[]');
   protected readonly mensaje = signal('');
