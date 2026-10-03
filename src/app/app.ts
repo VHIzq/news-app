@@ -18,15 +18,15 @@ export class App {
   protected readonly json = signal('[]');
   protected readonly mensaje = signal('');
 
-  protected nueva: DatosNoticia = this.datosVacios();
+  protected noticia: DatosNoticia = this.datosVacios();
   protected edicionId: number | null = null;
   protected edicion: DatosNoticia = this.datosVacios();
   protected eliminacionId: number | null = null;
 
   protected agregar(): void {
-    const noticia = agregarNoticia(this.noticias, this.nueva);
-    this.nueva = this.datosVacios();
-    this.actualizar(`Noticia ${noticia.id} agregada.`);
+    const agregada = agregarNoticia(this.noticias, this.noticia);
+    this.noticia = this.datosVacios();
+    this.actualizar(`Noticia ${agregada.id} agregada.`);
   }
 
   protected editar(): void {

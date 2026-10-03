@@ -3,15 +3,20 @@
 <section>
   <h2>Agregar noticia</h2>
   <form (ngSubmit)="agregar()">
-    <input name="titulo" placeholder="Título" [(ngModel)]="nueva.titulo" required />
+    <input name="titulo" placeholder="Título" [(ngModel)]="noticia.titulo" required />
     <textarea
       name="contenido"
       placeholder="Contenido"
-      [(ngModel)]="nueva.contenido"
+      [(ngModel)]="noticia.contenido"
       required
     ></textarea>
-    <input name="imagenUrl" placeholder="URL de la imagen" [(ngModel)]="nueva.imagenUrl" required />
-    <input name="autor" placeholder="Autor" [(ngModel)]="nueva.autor" required />
+    <input
+      name="imagenUrl"
+      placeholder="URL de la imagen"
+      [(ngModel)]="noticia.imagenUrl"
+      required
+    />
+    <input name="autor" placeholder="Autor" [(ngModel)]="noticia.autor" required />
     <button type="submit">Agregar</button>
   </form>
 </section>
